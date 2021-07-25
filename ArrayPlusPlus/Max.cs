@@ -2,11 +2,26 @@
 {
     public static partial class ArrayPlusPlus
     {
-        public static int Max(this int[] array, out int? index)
+        public static int MaxPP(this int[] array, int defaultValue = int.MinValue)
         {
-            int max = int.MinValue;
+            int max = defaultValue;
 
-            index = default;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (max < array[i])
+                {
+                    max = array[i];
+                }
+            }
+
+            return max;
+        }
+
+        public static int MaxPP(this int[] array, out int index, int defaultValue = int.MinValue)
+        {
+            int max = defaultValue;
+
+            index = -1;
 
             for (int i = 0; i < array.Length; i++)
             {

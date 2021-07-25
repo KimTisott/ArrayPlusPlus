@@ -2,7 +2,7 @@
 {
     public static partial class ArrayPlusPlus
     {
-        public static int Sum(this int[] array)
+        public static int SumPP(this int[] array)
         {
             int sum = default;
 

@@ -2,9 +2,22 @@
 {
     public static partial class ArrayPlusPlus
     {
-        public static bool Contains<T>(this T[] array, T element, out int? index)
+        public static bool ContainsPP<T>(this T[] array, T element)
         {
-            index = default;
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (element.Equals(array[i]))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public static bool ContainsPP<T>(this T[] array, T element, out int index)
+        {
+            index = -1;
 
             for (int i = 0; i < array.Length; i++)
             {
