@@ -16,9 +16,9 @@ namespace ArrayPlusPlus.Benchmark
 
         static void Main()
         {
-            //var array = new int[] { 3, 2, 3, 1, 2, 2 };
+            var array = new int[] { 3, 2, 3, 1, 2, 2 };
 
-            //var hey = ArrayPlusPlus.MaxPP(array);
+            var hey = ArrayPlusPlus.MaxPP(array);
 
             var config = ManualConfig.CreateEmpty()
                 .AddLogger(ConsoleLogger.Default)

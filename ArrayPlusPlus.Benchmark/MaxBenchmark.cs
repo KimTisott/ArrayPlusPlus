@@ -14,13 +14,7 @@ namespace ArrayPlusPlus.Benchmark
         [Benchmark]
         public int MaxPP()
         {
-            return Data.MaxPP();
-        }
-
-        [Benchmark]
-        public int MaxPPIndex()
-        {
-            return Data.MaxPP(out _);
+            return Data.MaxPP(out int index);
         }
     }
 }
